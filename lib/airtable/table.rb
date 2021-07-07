@@ -72,7 +72,7 @@ module Airtable
 
     # Replaces record in airtable based on id
     def update(record)
-      result = self.class.put(worksheet_url + "/" + record.id,
+      result = self.class.patch(worksheet_url + "/" + record.id,
         :body => { "fields" => record.fields_for_update }.to_json,
         :headers => { "Content-type" => "application/json" }).parsed_response
 
