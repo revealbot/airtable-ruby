@@ -51,7 +51,7 @@ describe Airtable do
     it "should allow updating records" do
         record_id = "12345"
         stub_airtable_response!("https://api.airtable.com/v0/#{@app_key}/#{@sheet_name}/#{record_id}",
-          { "fields" => { "name" => "Sarah Jaine", "email" => "sarah@jaine.com", "foo" => "bar" }, "id" => record_id }, :put)
+          { "fields" => { "name" => "Sarah Jaine", "email" => "sarah@jaine.com", "foo" => "bar" }, "id" => record_id }, :patch)
         table = Airtable::Client.new(@client_key).table(@app_key, @sheet_name)
         record = Airtable::Record.new(:name => "Sarah Jaine", :email => "sarah@jaine.com", :id => record_id)
         table.update(record)

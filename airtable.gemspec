@@ -1,4 +1,4 @@
-# coding: utf-8
+  # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'airtable/version'
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "httparty", "~> 0.14.0"
   spec.add_dependency "activesupport", ">= 3.0"
 
-  spec.add_development_dependency "bundler", "~> 1.6"
+  spec.add_development_dependency "bundler", "~> 2.2"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "minitest", "~> 5.6.0"
   spec.add_development_dependency "webmock", "~> 2.1.0"
